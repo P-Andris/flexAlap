@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+header, main, nav, article, section, footer {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+header {
+    background-color: indianred;
+}
+
+article {
+    background-color: purple;
+    flex: 0 0 200%;
+}
+
+section {
+    display: flex;
+    /* flex-direction: row-reverse;
+    flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+article:nth-child(1) {
+    order: 1;
+}
+
+article:nth-child(6) {
+    order: 3;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+}
+
+#listaval ul, #divekkel .menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+}
+
+#listaval, #divekkel {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        flex-direction: column;
+    }
+}
